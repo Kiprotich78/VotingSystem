@@ -1,9 +1,10 @@
 const btn = document.querySelectorAll("button");
 const submitVoteBtn = document.querySelector('.submit');
 let candidateID;
+
 btn.forEach((e, index) => {
     e.addEventListener("click", () => {
-        candidateID = index + 1;
+        candidateID = index;
         console.log(candidateID);
         submitVoteBtn.classList.add('voting');
         btn.forEach((element =>{

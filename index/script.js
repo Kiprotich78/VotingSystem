@@ -11,8 +11,6 @@ function setPage() {
     validateFields(signUpFields, 1);
 }
 
-
-
 function toggleWindows() {
     toggleWindow.forEach((element, index) => {
         element.addEventListener('click', () => {
@@ -47,15 +45,16 @@ function validateFields(inputs, index) {
                         document.querySelector('.err').style.display = "block";
                     }
                 } else {
+                    document.querySelector('.err').style.display = "none";
                     btns[index].classList.add("active");
                 }
                 
             } else {
+                document.querySelector('.err').style.display = "none";
                 btns[index].classList.remove("active");
             }
             
         });
-
     });
 
 }
