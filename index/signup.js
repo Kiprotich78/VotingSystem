@@ -18,8 +18,9 @@ signUpBtn.addEventListener('click', () => {
             if (res == "Success") {
                 window.location.replace("../VotingSystem/vote");
             } else {
-                document.querySelector(".err").textContent = res;
-                document.querySelector(".err").style.display = "block";
+                let error = document.querySelectorAll(".err");
+                error[1].textContent = res;
+                error[1].style.display = "block";
             }
         })
         .catch((err) => {

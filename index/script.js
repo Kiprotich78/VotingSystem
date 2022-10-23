@@ -29,6 +29,7 @@ function toggleWindows() {
 function validateFields(inputs, index) {
     inputs.forEach((e) => {
         e.addEventListener('keyup', () => {
+            let err = document.querySelectorAll(".err");
             let num = 0;
             inputs.forEach((element) => {
                 if (element.value) {
@@ -39,18 +40,18 @@ function validateFields(inputs, index) {
                 if (index == 1) {
                     if (inputs[1].value == inputs[2].value) {
                         btns[index].classList.add("active");
-                        document.querySelector('.err').style.display = "none";
+                        err[1].style.display = "none";
                     } else {
                         btns[index].classList.remove("active");
-                        document.querySelector('.err').style.display = "block";
+                        err[1].style.display = "block";
                     }
                 } else {
-                    document.querySelector('.err').style.display = "none";
+                    err[1].style.display = "none";
                     btns[index].classList.add("active");
                 }
                 
             } else {
-                document.querySelector('.err').style.display = "none";
+                err[0].style.display = "none";
                 btns[index].classList.remove("active");
             }
             
