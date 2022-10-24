@@ -35,7 +35,7 @@ submitVoteBtn.addEventListener("click", () => {
         e.classList.remove('active');
         e.classList.add("voted");
     })
-    window.location.reload();
+    checkVote();
     
 });
 
