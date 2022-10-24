@@ -14,7 +14,7 @@ This is a Simple Voting system made with `HTML`, `CSS`, `JavaScript`, `PHP` and 
 
 
 ## Running the app
-    go to `http://127.0.0.1/` to load the index file
+   go to `http://127.0.0.1/` to load the index file
 
 ## Contributors 
 - Kiprotich Shadrack
