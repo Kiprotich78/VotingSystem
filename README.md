@@ -1,5 +1,5 @@
 # Complete voting System
-    This is a Simple Voting system made with `HTML`, `CSS`, `JavaScript`, `PHP` and `MySQL`
+This is a Simple Voting system made with `HTML`, `CSS`, `JavaScript`, `PHP` and `MySQL`
 
 ## Dependencies
    - Install XAMPP
