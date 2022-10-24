@@ -17,4 +17,4 @@
     go to `http://127.0.0.1/` to load the index file
 
 ## Contributors 
-    - Kiprotich Shadrack
+- Kiprotich Shadrack
