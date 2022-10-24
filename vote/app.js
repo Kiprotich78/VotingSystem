@@ -3,6 +3,12 @@ const submitVoteBtn = document.querySelector('.submit');
 let candidateID;
 
 checkVote();
+checkSession();
+
+window.addEventListener('beforeunload', () => {
+    logOut();
+});
+
 
 btn.forEach((e, index) => {
     e.addEventListener("click", () => {
@@ -81,4 +87,35 @@ function getVotes(data) {
             btn[data].textContent = `Votes: ${res}`;
         }).catch(err => console.log(err.message));
     
+}
+
+// document.addEventListener('visibilitychange', () => {
+//     logOut(document.visibilityState);
+// });
+
+
+function logOut() {
+    fetch('../php/logOut.php')
+        .then((res) => {
+            return res.text();
+        })
+        .then((res) => {
+            // if (res == "ok") {
+            //     window.location.replace("../index.html");
+            // }
+            console.log("success");
+        }).catch(err => console.log(err.message));
+}
+
+function checkSession() {
+    fetch('../php/checkSession.php')
+        .then((res) => {
+            return res.text();
+        })
+        .then((res) => {
+            if (res == "notset") {
+                window.location.replace("../index.html");
+            }
+            console.log(res);
+        }).catch(res => console.log(res.message));
 }
