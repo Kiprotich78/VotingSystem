@@ -12,7 +12,7 @@
         $votes = $row['votes'];
         $votes = (int)$votes;
         $votes = $votes + 1;
-        $query2 = "UPDATE candidates SET votes = '{$votes}' WHERE candidateId = '{$candidateID}' AND status = 'notvoted'";
+        $query2 = "UPDATE candidates SET votes = '{$votes}' WHERE candidateId = '{$candidateID}'";
         $sql2 = mysqli_query($conn, $query2);
         if($sql2){
             $query3 = "UPDATE users SET status = 'voted' WHERE unique_id = '".$_SESSION['unique_id']."'";
