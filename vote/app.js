@@ -35,6 +35,7 @@ submitVoteBtn.addEventListener("click", () => {
         e.classList.remove('active');
         e.classList.add("voted");
     })
+
     checkVote();
     
 });
@@ -48,7 +49,10 @@ function checkVote() {
             if (res == "voted") {
                 btn.forEach((e, index) => {
                     e.classList.add('active');
-                    getVotes(index);
+                    setInterval(() => {
+                        getVotes(index);
+                    });
+                    
                 })
                 document.querySelector('.submit').textContent = "Thanks For Your Vote!!";
             }
