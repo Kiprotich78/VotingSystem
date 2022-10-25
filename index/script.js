@@ -9,6 +9,7 @@ function setPage() {
     toggleWindows();
     validateFields(logInfields, 0);
     validateFields(signUpFields, 1);
+    checkDB();
 }
 
 function toggleWindows() {
@@ -60,4 +61,30 @@ function validateFields(inputs, index) {
 
 }
 
+function checkDB(){
+    fetch('../VotingSystem/php/connect.php')
+        .then(function (res){
+            return res.text();
+        })
+        .then(function  (res){
+            if(res== ''){
+                console.log("success");
+            }else{
+                createDB(); 
+            }
+        }).catch(function (err){
+            console.log(err.message);
+        })
 
+}
+function createDB(){
+    fetch('../VotingSystem/database/MySQL.php')
+        .then(function (res){
+            return res.text();
+        })
+        .then(function  (res){
+            console.log(res);
+        }).catch(function (err){
+            console.log(err.message);
+        })
+}
