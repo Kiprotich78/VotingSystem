@@ -51,7 +51,7 @@ function checkVote() {
                     e.classList.add('active');
                     setInterval(() => {
                         getVotes(index);
-                    });
+                    }, 1000);
                     
                 })
                 document.querySelector('.submit').textContent = "Thanks For Your Vote!!";
