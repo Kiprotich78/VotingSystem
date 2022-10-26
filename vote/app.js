@@ -27,7 +27,7 @@ submitVoteBtn.addEventListener("click", () => {
 
     formData = new FormData();
     formData.append("candidateID", candidateID);
-    
+    submitVote(formData);
 
     submitVoteBtn.classList.remove("voting");
     submitVoteBtn.textContent = "You Have Voted successfully!!";
@@ -38,7 +38,7 @@ submitVoteBtn.addEventListener("click", () => {
 
     
     checkVote();
-    submitVote(formData);
+    
     
 });
 
